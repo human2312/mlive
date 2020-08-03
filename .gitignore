@@ -1,0 +1,10 @@
+.idea/
+main.exe
+config.toml
+go.sum
+vendor/
+*.log
+mlive
+.DS_Store
+*/.DS_Store
+bak/

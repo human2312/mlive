@@ -1,0 +1,82 @@
+[gin]
+    # 运行模式 debug 或者 release
+    mode = "debug"
+
+
+# 日志
+[log]
+    # 目录
+    dir = "/apps/logs/go/mlive.zhuanbo.gdxfhl.com/"
+    # 文件
+    file = "mlive.log"
+    # 请求日志
+    fileRequest = "mlivereq.log"
+    # 日志文件最大多少 单位 M
+    maxSize = 100
+    # 最多保存多少个备份
+    maxBackups = 100
+    # bakDir 日志备份位置
+    bakDir = "/apps/logs/go/mlive.zhuanbo.gdxfhl.com/bak/"
+
+
+
+[server]
+    # 端口
+    addr = ":8099"
+    readTimeout = 30
+    writeTimeout = 30
+
+
+[mysql]
+    dsn = "mlive:x7YcPlLcV@tcp(120.78.198.128:3316)/mlive?timeout=5s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8,utf8mb4"
+    active = 5
+    idle = 5
+    idleTimeout = 14400
+
+[arangodb]
+    #
+    userName        = "root"
+    passWord        = "WyxNC808sHszIiUG"
+    dataBaseName    = "mlive"
+    url             = "http://120.78.198.128:8539"
+
+[file]
+    #
+    url             = "http://test-download.yinli.gdxfhl.com/profitCal/"
+    #path            = "/apps/data/work/go/profitCal/file/"
+    path            = ""
+
+[sign]
+    app_sign_ver_key_v1 = "12345678"
+
+[java]
+    java_admininfo_url = "https://test-admin-api.zhuanbo.gdxfhl.com/admin/admin/token/info"
+    java_adminread_url = "https://test-admin-api.zhuanbo.gdxfhl.com/admin/admin/read"
+    java_user_info_url = "http://test-zb-api.zhuanbo.gdxfhl.com/shop/mobile/user/base/info"
+    java_user_deposit_url = "http://test-zb-api.zhuanbo.gdxfhl.com/shop/deposit/get/info"
+    java_user_order_url   = "http://test-zb-api.zhuanbo.gdxfhl.com/shop/order/detail"
+    java_order_buy_type_count   =  "http://test-zb-api.zhuanbo.gdxfhl.com/shop/order/buyTypeCount"
+    java_api_url_token2Id   =  "http://test-zb-api.zhuanbo.gdxfhl.com/shop/mobile/auth/token2Id"
+    java_admin_user_account_info   =  "http://test-zb-api.zhuanbo.gdxfhl.com/admin/user/account/info"
+
+    java_depositOrderDetail_url = "https://test-order.zhuanbo.gdxfhl.com/shop/deposit/get/info"
+    java_goodsOrderDetail_url = "https://test-order.zhuanbo.gdxfhl.com/shop/order/detail"
+    java_carriage_url = "https://test-admin-api.zhuanbo.gdxfhl.com/admin/gc/frist"
+
+
+[php]
+    php_goodsDetail_url = "https://test-mlive-admin.zhuanbo.gdxfhl.com/internal/goods/detail"
+    php_investGoodsDetail_url = "https://test-mlive-admin.zhuanbo.gdxfhl.com/internal/investors/list"
+
+[rabbitmq]
+    mqurl = "amqp://mqmall:ea8KKtwM@47.112.241.96:5672/mppartner"
+    exchange = "mppartnerE"
+    kind = "topic"
+
+[rabbitmqueue]
+    monitorUser = "zhuanbo.user.modify.info.dev"
+    pushUser    = "zhuanbo.user.modify.shop.dev"
+    monitorUserLevel = "zhuanbo.user.modify.level.dev"
+    order = "zhuanbo.order.profit.dev"
+    result = "zhuanbo.order.profit.result.dev"
+
